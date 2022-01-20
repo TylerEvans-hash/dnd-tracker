@@ -11,122 +11,181 @@
 </head>
 
 <body>
-    <header>
-        <div class="row">
-            <div class="col">
-                <h1>Dungeons & Dragons</h1>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <nav class="nav nav-pills justify-content-center">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">My Character</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <!-- Use as spacer until D&D svg file is available -->
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="display-6">Dungeons & Dragons</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">My Characters</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">login/logout</a></li>
+        </ul>
     </header>
 
     <main>
-        <div class="container character">
-            <div class="row">
-                <div class="col">
+        <div class=" container row">
+            <div class="col-3">
+                <div class="container">
+                    <!-- Enter all Skills and their Points -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Stealth: 10</td></tr>
+                            <tr><td>Acrobatics: 13</td></tr>
+                            <tr><td>Athletics: 8</td></tr>
+                            <tr><td>Acrobatics: 8</td></tr>
+                            <tr><td>Sleight of Hand: 8</td></tr>
+                            <tr><td>Stealth: 8</td></tr>
+                            <tr><td>Arcana: 8</td></tr>
+                            <tr><td>History: 8</td></tr>
+                            <tr><td>Investigation: 8</td></tr>
+                            <tr><td>Nature: 8</td></tr>
+                            <tr><td>Religion: 8</td></tr>
+                            <tr><td>Animal Handling: 8</td></tr>
+                            <tr><td>Insight: 8</td></tr>
+                            <tr><td>Medicine: 8</td></tr>
+                            <tr><td>Perception: 8</td></tr>
+                            <tr><td>Survival: 8</td></tr>
+                            <tr><td>Deception: 8</td></tr>
+                            <tr><td>Intimidation: 8</td></tr>
+                            <tr><td>Performance: 8</td></tr>
+                            <tr><td>Persuasion: 8</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-9">
+                <div class="container character">
                     <div class="row">
-                        <!-- <h2>Character</h2> -->
-                        <h2>Kevvoril</h2>
+                        <div class="col">
+                            <div class="row">
+                                <!-- Custom character name -->
+                                <h2>Kevvoril</h2>
+                            </div>
+                            <ul>
+                                <!-- Custom Character Stats -->
+                                <li>Health: 5/13</li>
+                                <li>Level: 25</li>
+                                <li>Exp: 375</li>
+                                <li>Race: Half Elvish / Half Human</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <div class="container-sm">
+                                <!-- Custom Character Image -->
+                                <img src="Half-Elf.png" alt="Half Elf & Half Human"
+                                    style="width:150px;height:150px;">
+                            </div>
+                        </div>
                     </div>
-                    <ul>
-                        <!-- <li>Name: Example Name</li> -->
-                        <li>Level: 25</li>
-                        <li>Exp: 375</li>
-                        <li>Race: Half Elvish / Half Human</li>
-                    </ul>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Custom Character Backstory - User Inputed Field -->
+                            <h4>Backstory</h4>
+                            <a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium unde ducimus atque
+                                cum
+                                error
+                                dicta corporis natus, perferendis id reiciendis veniam? Explicabo consequuntur, deserunt
+                                adipisci vel veritatis obcaecati id libero?</a>
+                            <br><br>
+                            <a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur nihil quidem nulla
+                                accusamus
+                                praesentium atque unde cumque delectus molestiae! Corporis animi dignissimos beatae
+                                ipsum
+                                cum
+                                quaerat placeat nam accusantium aliquid?</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <div class="container-sm">
-                        <img src="Half-Elf copy.png" alt="Half Elf & Half Human" style="width:130px;height:130px;">
-                    </div>
+
+                <br>
+
+                <div class="container weapons">
+                    <h2>Weapons</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Damage</th>
+                                <th scope="col">Modifier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="weapon-1">
+                                <td>Dagger</td>
+                                <td>Hash Slinging Slasher</td>
+                                <td>2d8</td>
+                                <td>1d6</td>
+                            </tr>
+                            <tr id="weapon-2">
+                                <td>Shortsword</td>
+                                <td>Sting</td>
+                                <td>3d6</td>
+                                <td>1d8</td>
+                            </tr>
+                            <tr id="weapon-3">
+                                <td>Longbow</td>
+                                <td>Shooting Start</td>
+                                <td>2d6</td>
+                                <td>1d4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+
+                <div class="container inventory">
+                    <h2>Inventory</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="item-1">
+                                <td>2</td>
+                                <td>Arrows</td>
+                                <td>20</td>
+                                <td>Sharp broadhead arrows used to take down even the strongest of enemies</td>
+                            </tr>
+                            <tr id="item-2">
+                                <td>5</td>
+                                <td>Spears</td>
+                                <td>5</td>
+                                <td>Well balanced as all things should</td>
+                            </tr>
+                            <tr id="item-3">
+                                <td>9</td>
+                                <td>Rations</td>
+                                <td>6</td>
+                                <td>Delicious looking lembas bread and cold cured meats</td>
+                            </tr>
+                            <tr id="item-4">
+                                <td>10</td>
+                                <td>Theives Tools</td>
+                                <td>1</td>
+                                <td>Tools to breakin and steal. Just like a theive</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h4>Backstory</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="container weapons">
-            <h2>Weapons</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Type</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Damage</th>
-                        <th scope="col">Modifier</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dagger</td>
-                        <td>Hash Slinging Slasher</td>
-                        <td>2d8</td>
-                        <td>1d6</td>
-                    </tr>
-                    <tr>
-                        <td>Shortsword</td>
-                        <td>Sting</td>
-                        <td>3d6</td>
-                        <td>1d8</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="container inventory">
-            <h2>Inventory</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Weight</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>Arrows</td>
-                        <td>20</td>
-                        <td>Sharp broadhead arrows used to take down even the strongest of enemies</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Spears</td>
-                        <td>5</td>
-                        <td>Well balanced as all things should</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Rations</td>
-                        <td>6</td>
-                        <td>Delicious looking lembas bread and cold cured meats</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Theives Tools</td>
-                        <td>1</td>
-                        <td>Tools to breakin and steal. Just like a theive</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </main>
 </body>
